@@ -6,7 +6,6 @@ class LocationWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    print("Location: $screenWidth");
     return Container(
       width: screenWidth < 750 ? screenWidth * 0.9 : 350,
       padding: const EdgeInsets.all(20.0),
@@ -19,12 +18,61 @@ class LocationWidget extends StatelessWidget {
         children: [
           const Text(
             "Location",
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.black),
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
           ),
+          const SizedBox(
+            height: 7,
+          ),
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 12,
+                child: Image.asset(
+                  'flags/bd_flag.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const SizedBox(
+                width: 7,
+              ),
+              const Text(
+                "Dhaka, Bangladesh",
+                style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.black87,
+                    fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          _locationItem("Website", 'something.com'),
+          _locationItem("Portfolio", '@sufikhan'),
+          _locationItem("Email", 'hello@hotmail.com'),
         ],
       ),
+    );
+  }
+
+  Widget _locationItem(String title, String subTitle) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const SizedBox(
+          height: 25,
+        ),
+        Text(
+          title,
+          style:
+              const TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
+        ),
+        const SizedBox(
+          height: 7,
+        ),
+        Text(
+          subTitle,
+          style:
+              const TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
+        ),
+      ],
     );
   }
 }

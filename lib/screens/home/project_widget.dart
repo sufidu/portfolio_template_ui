@@ -14,7 +14,9 @@ class ProjectWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Container(
+      width: screenWidth < 750 ? screenWidth * 0.9 : 320,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.black87),
         borderRadius: BorderRadius.circular(10),

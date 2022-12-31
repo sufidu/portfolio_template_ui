@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_template_ui/screens/home/about_widget.dart';
 import 'package:portfolio_template_ui/screens/home/locatioin_widget.dart';
+import 'package:portfolio_template_ui/screens/home/project_widget.dart';
 import 'package:portfolio_template_ui/widgets/animated_action_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -153,14 +154,38 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 30,
                   ),
                   Padding(
-                    padding: EdgeInsets.all(_isMobile ? 10.0 : 20.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: Wrap(
-                      alignment: WrapAlignment.center,
+                      alignment: _screenSize.width < 750
+                          ? WrapAlignment.start
+                          : WrapAlignment.center,
                       spacing: 30.0,
                       runSpacing: 20.0,
-                      children: const [
-                        AboutWidget(),
-                        LocationWidget(),
+                      children: [
+                        const AboutWidget(),
+                        const LocationWidget(),
+                        const ProjectWidget(
+                            projectTile: 'Team Lead',
+                            projectSubtitle: 'AFLEX',
+                            duration: 'August 2013 - March 2015'),
+                        const ProjectWidget(
+                            projectTile: 'Team Lead',
+                            projectSubtitle: 'AFLEX',
+                            duration: 'August 2013 - March 2015'),
+                        SizedBox(
+                          width: _screenSize.width < 1060 ? 0 : 320,
+                        ),
+                        const ProjectWidget(
+                            projectTile: 'Team Lead',
+                            projectSubtitle: 'AFLEX',
+                            duration: 'August 2013 - March 2015'),
+                        const ProjectWidget(
+                            projectTile: 'Team Lead',
+                            projectSubtitle: 'AFLEX',
+                            duration: 'August 2013 - March 2015'),
+                        SizedBox(
+                          width: _screenSize.width < 1060 ? 0 : 320,
+                        ),
                       ],
                     ),
                   )

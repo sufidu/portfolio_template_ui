@@ -156,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: EdgeInsets.all(_isMobile ? 10.0 : 20.0),
                     child: Wrap(
                       alignment: WrapAlignment.center,
-                      spacing: 20.0,
+                      spacing: 30.0,
                       runSpacing: 20.0,
                       children: const [
                         AboutWidget(),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_template_ui/screens/home/about_widget.dart';
+import 'package:portfolio_template_ui/screens/home/locatioin_widget.dart';
 import 'package:portfolio_template_ui/widgets/animated_action_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,9 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     _screenSize = MediaQuery.of(context).size;
     _isMobile = _screenSize.width > 700 ? false : true;
+    print("Width: $_screenSize.width");
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.red[50],
+        backgroundColor: Colors.blue[50],
         appBar: AppBar(
           backgroundColor: Colors.blue,
           title: Text('Md Sufi Khan'),
@@ -107,6 +110,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ElevatedButton(
                         onPressed: () {},
                         style: ButtonStyle(
+                          padding:
+                              MaterialStateProperty.all<EdgeInsetsGeometry>(
+                                  const EdgeInsets.all(20.0)),
                           foregroundColor:
                               MaterialStateProperty.all<Color>(Colors.black),
                           backgroundColor:
@@ -118,10 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.all(10.0),
-                          child: Text("View Portfolio"),
-                        ),
+                        child: const Text("View Portfolio"),
                       ),
                       const SizedBox(
                         width: 10,
@@ -129,23 +132,38 @@ class _HomeScreenState extends State<HomeScreen> {
                       ElevatedButton(
                         onPressed: () {},
                         style: ButtonStyle(
+                          padding:
+                              MaterialStateProperty.all<EdgeInsetsGeometry>(
+                                  const EdgeInsets.all(20.0)),
                           foregroundColor:
                               MaterialStateProperty.all<Color>(Colors.white),
-                          backgroundColor:
-                              MaterialStateProperty.all<Color>(Color.fromARGB(255, 30, 13, 60)),
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 30, 13, 60)),
                           shape: MaterialStateProperty.all(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                             ),
                           ),
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.all(10.0),
-                          child: Text("+  Follow"),
-                        ),
+                        child: const Text("+  Follow"),
                       ),
                     ],
                   ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(_isMobile ? 10.0 : 20.0),
+                    child: Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: 20.0,
+                      runSpacing: 20.0,
+                      children: const [
+                        AboutWidget(),
+                        LocationWidget(),
+                      ],
+                    ),
+                  )
                 ],
               )
             ],

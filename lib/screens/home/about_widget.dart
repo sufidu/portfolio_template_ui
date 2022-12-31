@@ -6,8 +6,7 @@ class AboutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    return Container(
-      color: Colors.amber,
+    return SizedBox(
       width: screenWidth < 750 ? screenWidth * 0.9 : (screenWidth - 420),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,7 +23,13 @@ class AboutWidget extends StatelessWidget {
             style: TextStyle(color: Colors.black87),
           ),
           SizedBox(
-            height: 20,
+            height: 10,
+          ),
+          Divider(
+            color: Colors.black54, 
+          ),
+          SizedBox(
+            height: 10,
           ),
           Text(
             "About Me",

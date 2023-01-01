@@ -154,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 30,
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(25.0),
                     child: Wrap(
                       alignment: _screenSize.width < 850
                           ? WrapAlignment.start
@@ -169,18 +169,18 @@ class _HomeScreenState extends State<HomeScreen> {
                             projectSubtitle: 'AFLEX',
                             duration: 'August 2013 - March 2015'),
                         const ProjectWidget(
-                            projectTile: 'Team Lead',
+                            projectTile: 'Software Developer',
                             projectSubtitle: 'AFLEX',
                             duration: 'August 2013 - March 2015'),
                         SizedBox(
                           width: _screenSize.width < 1060 ? 0 : _screenSize.width < 1200 ? 0 : _screenSize.width < 1400 ? 200 : 320,
                         ),
                         const ProjectWidget(
-                            projectTile: 'Team Lead',
+                            projectTile: 'Software Developer',
                             projectSubtitle: 'AFLEX',
                             duration: 'August 2013 - March 2015'),
                         const ProjectWidget(
-                            projectTile: 'Team Lead',
+                            projectTile: 'Team Member',
                             projectSubtitle: 'AFLEX',
                             duration: 'August 2013 - March 2015'),
                         SizedBox(

@@ -7,7 +7,7 @@ class AboutWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return SizedBox(
-      width: screenWidth < 750 ? screenWidth * 0.9 : (screenWidth - 420),
+      width: screenWidth < 750 ? screenWidth * 0.9 : (screenWidth - 500),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [

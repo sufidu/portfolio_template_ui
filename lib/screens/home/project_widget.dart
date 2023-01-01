@@ -16,9 +16,20 @@ class ProjectWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Container(
-      width: screenWidth < 750 ? screenWidth * 0.9 : screenWidth < 850 ? 400 :  screenWidth < 1200 ? 360 :  screenWidth < 1400 ? screenWidth * 0.3 : screenWidth * 0.35,
+      width: screenWidth < 750
+          ? screenWidth * 0.9
+          : screenWidth < 850
+              ? 400
+              : screenWidth < 1200
+                  ? 360
+                  : screenWidth < 1400
+                      ? screenWidth * 0.3
+                      : screenWidth * 0.35,
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.black87),
+        border: Border.all(
+          color: Colors.black45,
+          width: 2.0,
+        ),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -69,8 +80,8 @@ class ProjectWidget extends StatelessWidget {
           ),
           const Divider(
             height: 1,
-            thickness: 1,
-            color: Colors.black87,
+            thickness: 1.5,
+            color: Colors.black54,
           ),
           Container(
             alignment: Alignment.centerRight,

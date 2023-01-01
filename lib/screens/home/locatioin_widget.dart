@@ -11,14 +11,18 @@ class LocationWidget extends StatelessWidget {
       padding: const EdgeInsets.all(20.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
-        border: Border.all(color: Colors.black),
+        border: Border.all(
+          color: Colors.black45,
+          width: 2.0,
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
             "Location",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
+            style:
+                TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
           ),
           const SizedBox(
             height: 7,
@@ -61,16 +65,16 @@ class LocationWidget extends StatelessWidget {
         ),
         Text(
           title,
-          style:
-              const TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
+          style: const TextStyle(
+              fontWeight: FontWeight.bold, color: Colors.black87),
         ),
         const SizedBox(
           height: 7,
         ),
         Text(
           subTitle,
-          style:
-              const TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
+          style: const TextStyle(
+              fontWeight: FontWeight.bold, color: Colors.black87),
         ),
       ],
     );

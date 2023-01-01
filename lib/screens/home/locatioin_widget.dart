@@ -43,7 +43,7 @@ class LocationWidget extends StatelessWidget {
                 "Dhaka, Bangladesh",
                 style: TextStyle(
                     fontSize: 15,
-                    color: Colors.black87,
+                    color: Colors.black54,
                     fontWeight: FontWeight.bold),
               ),
             ],
@@ -74,7 +74,7 @@ class LocationWidget extends StatelessWidget {
         Text(
           subTitle,
           style: const TextStyle(
-              fontWeight: FontWeight.bold, color: Colors.black87),
+              fontWeight: FontWeight.bold, color: Colors.black54),
         ),
       ],
     );

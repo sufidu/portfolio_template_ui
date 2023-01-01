@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Positioned(
                     bottom: 0,
                     child: Container(
-                      color: Colors.white,
+                      color: Colors.blue[50],
                       height: 60,
                       width: _screenSize.width,
                     ),

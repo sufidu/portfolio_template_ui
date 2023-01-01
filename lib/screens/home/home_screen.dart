@@ -27,13 +27,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     _screenSize = MediaQuery.of(context).size;
     _isMobile = _screenSize.width > 700 ? false : true;
-    print("Width: $_screenSize.width");
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.blue[50],
         appBar: AppBar(
           backgroundColor: Colors.blue,
-          title: Text('Md Sufi Khan'),
+          title: const Text('Md Sufi Khan'),
           actions: _isMobile ? null : navItems,
         ),
         drawer: _isMobile
@@ -167,24 +166,36 @@ class _HomeScreenState extends State<HomeScreen> {
                         const ProjectWidget(
                             projectTile: 'Team Lead',
                             projectSubtitle: 'AFLEX',
-                            duration: 'August 2013 - March 2015'),
+                            duration: 'August 2020 - March 2022'),
                         const ProjectWidget(
                             projectTile: 'Software Developer',
                             projectSubtitle: 'AFLEX',
-                            duration: 'August 2013 - March 2015'),
+                            duration: 'June 2019 - December 2020'),
                         SizedBox(
-                          width: _screenSize.width < 1060 ? 0 : _screenSize.width < 1200 ? 0 : _screenSize.width < 1400 ? 200 : 320,
+                          width: _screenSize.width < 1060
+                              ? 0
+                              : _screenSize.width < 1200
+                                  ? 0
+                                  : _screenSize.width < 1400
+                                      ? 200
+                                      : 320,
                         ),
                         const ProjectWidget(
                             projectTile: 'Software Developer',
                             projectSubtitle: 'AFLEX',
-                            duration: 'August 2013 - March 2015'),
+                            duration: 'March 2018 - April 2019'),
                         const ProjectWidget(
                             projectTile: 'Team Member',
                             projectSubtitle: 'AFLEX',
-                            duration: 'August 2013 - March 2015'),
+                            duration: 'August 2017 - March 2018'),
                         SizedBox(
-                          width: _screenSize.width < 1060 ? 0 : _screenSize.width < 1200 ? 0 : _screenSize.width < 1400 ? 200 : 320,
+                          width: _screenSize.width < 1060
+                              ? 0
+                              : _screenSize.width < 1200
+                                  ? 0
+                                  : _screenSize.width < 1400
+                                      ? 200
+                                      : 320,
                         ),
                       ],
                     ),
